@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SurgeonBody_0: 6824484821143237658
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
