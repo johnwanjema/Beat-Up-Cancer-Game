@@ -2,22 +2,38 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private LayerMask groundLayer;
     Rigidbody2D body;
-    float speed = 10;
-    private float jumpingPower = 5f;
+    SpriteRenderer sprite;
+    BoxCollider2D boxCollider;
+    float speed = 5;
+    private float jumpingPower = 5;
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
     {   
         // 2D Movement
         body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.linearVelocity.y);
+        if (body.linearVelocity.x < 0) {
+            sprite.flipX = true;
+        } else if (body.linearVelocity.x > 0) {
+            sprite.flipX = false;
+        }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded())
         {
-            body.linearVelocity = new UnityEngine.Vector2(body.linearVelocity.x, jumpingPower);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, jumpingPower);
         }        
+    }
+
+    private bool isGrounded()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        return raycastHit.collider != null;
     }
 }
