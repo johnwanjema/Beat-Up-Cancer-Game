@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 421a4097befdf0d4b97e6effb3b3c6cd
+guid: 2293411bfbcf54fcead13e77d1c3a587
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1158597091404886383
-    second: pause button-Photoroom_0
+      213: 1404028623067837608
+    second: Logo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pause button-Photoroom_0
+      name: Logo_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 9
-        width: 1271
-        height: 1186
+        x: 0
+        y: 0
+        width: 322
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19ec2097516dbefe0800000000000000
-      internalID: -1158597091404886383
+      spriteID: 8a47074089c1c7310800000000000000
+      internalID: 1404028623067837608
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      pause button-Photoroom_0: -1158597091404886383
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
