@@ -433,6 +433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50682f258151426eacbcecb1f4ad575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  tempPos: {x: 0, y: 0, z: 0}
   minX: -82
   maxX: 82
 --- !u!1 &619394800
@@ -692,7 +694,7 @@ GameObject:
   - component: {fileID: 744870219}
   m_Layer: 0
   m_Name: Ground Holder
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
