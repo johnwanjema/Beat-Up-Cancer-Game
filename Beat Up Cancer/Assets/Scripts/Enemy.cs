@@ -12,7 +12,6 @@ public class Enemy : MonoBehaviour
     {
         mybody =  GetComponent<Rigidbody2D>();
 
-        speed = 5f;
     }
 
     // Update is called once per frame
