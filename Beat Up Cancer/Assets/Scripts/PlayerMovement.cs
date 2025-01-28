@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sprite;
     BoxCollider2D boxCollider;
     float speed = 5;
-    private float jumpingPower = 5;
+    private float jumpingPower = 8;
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
