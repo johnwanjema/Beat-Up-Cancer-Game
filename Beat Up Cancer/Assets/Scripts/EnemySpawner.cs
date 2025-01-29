@@ -1,0 +1,59 @@
+using UnityEngine;
+using System.Collections;
+
+public class EnemySpawner : MonoBehaviour
+{
+    // Reference to enemy prefabs
+    [SerializeField]
+    private GameObject[] enemyReference;
+
+    private GameObject spawnedEnemy;
+
+    // Positions for spawning enemies on the left and right
+    [SerializeField]
+    private Transform leftPos, rightPos;
+
+    private int randomIndex;  // Random enemy type index
+    private int randomSide;   // Random side (0 for left, 1 for right)
+
+    void Start()
+    {
+        // Start the spawning coroutine
+        StartCoroutine(SpawnedEnemy());
+    }
+
+    IEnumerator SpawnedEnemy()
+    {
+        // Infinite loop to spawn enemies continuously
+        while (true)
+        {
+            // Wait for a random amount of time between spawns
+            yield return new WaitForSeconds(Random.Range(3, 8));
+
+            // Choose a random enemy and a random side
+            randomIndex = Random.Range(0, enemyReference.Length);
+            randomSide = Random.Range(0, 2);
+
+            // Instantiate the enemy
+            spawnedEnemy = Instantiate(enemyReference[randomIndex]);
+
+            // Set size and direction
+            Vector3 enemyScale = new Vector3(0.2f, 0.2f, 1f); // Uniform scale for all enemies
+
+            // Spawn on the left side
+            if (randomSide == 0)
+            {
+                spawnedEnemy.transform.position = leftPos.position;
+                spawnedEnemy.transform.localScale = enemyScale; // Normal direction
+                spawnedEnemy.GetComponent<Enemy>().speed = Random.Range(4,8); // Positive speed
+            }
+            // Spawn on the right side
+            else
+            {
+                spawnedEnemy.transform.position = rightPos.position;
+                spawnedEnemy.transform.localScale = new Vector3(-enemyScale.x, enemyScale.y, enemyScale.z); // Flipped horizontally
+                spawnedEnemy.GetComponent<Enemy>().speed = -Random.Range(4,8); // Negative speed
+            }
+        }
+    }
+}
