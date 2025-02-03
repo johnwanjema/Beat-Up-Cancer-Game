@@ -28,7 +28,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpingPower);
-        }        
+        }  
+        if (!Input.GetButton("Jump") && body.linearVelocity.y > 0) {
+            body.linearVelocity = new Vector2(body.linearVelocity.x, 0);
+        }      
     }
 
     private bool isGrounded()

@@ -13,10 +13,10 @@ TagManager:
   - Water
   - UI
   - GroundLayer
-  - 
-  - 
-  - 
-  - 
+  - PlayerHitbox
+  - PlayerHurtbox
+  - EnemyHitbox
+  - EnemyHurtbox
   - 
   - 
   - 

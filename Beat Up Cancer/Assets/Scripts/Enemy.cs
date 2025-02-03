@@ -21,4 +21,11 @@ public class Enemy : MonoBehaviour
         // move enemy on the x- axis 
         mybody.linearVelocity = new Vector2(speed,mybody.linearVelocity.y);
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "PlayerHitbox") {
+            Destroy(gameObject);
+        }
+    }
 }
