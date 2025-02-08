@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sprite;
     BoxCollider2D boxCollider;
     float speed = 5;
-    private float jumpingPower = 8;
+    private float jumpingPower = 9;
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -18,7 +18,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {   
         // 2D Movement
-        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * (15 / 2) * speed, body.linearVelocity.y);
+        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.linearVelocity.y);
+
         if (body.linearVelocity.x < 0) {
             sprite.flipX = true;
         } else if (body.linearVelocity.x > 0) {
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, 7 * jumpingPower);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, 2 * jumpingPower);
         }  
         if (!Input.GetButton("Jump") && body.linearVelocity.y > 0) {
             body.linearVelocity = new Vector2(body.linearVelocity.x, 0);
