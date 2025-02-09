@@ -35,6 +35,19 @@ public class PlayerMovement : MonoBehaviour
         }      
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // Check if the player landed on the enemy from above
+            if (transform.position.y > collision.transform.position.y)
+            {
+                Destroy(collision.gameObject);
+                // collision.gameObject.GetComponent<Enemy>().Die();
+            }
+        }
+    }
+
     private bool isGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
