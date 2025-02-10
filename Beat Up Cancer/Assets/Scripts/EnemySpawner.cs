@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             // Wait for a random amount of time between spawns
-            yield return new WaitForSeconds(Random.Range(3, 8));
+            yield return new WaitForSeconds(Random.Range(4, 8));
 
             // Choose a random enemy and a random side
             randomIndex = Random.Range(0, enemyReference.Length);
@@ -40,19 +40,27 @@ public class EnemySpawner : MonoBehaviour
             // Set size and direction
             Vector3 enemyScale = new Vector3(0.2f, 0.2f, 1f); // Uniform scale for all enemies
 
+            // Get the SpriteRenderer component and set sorting order
+            SpriteRenderer enemyRenderer = spawnedEnemy.GetComponent<SpriteRenderer>();
+
+            if (enemyRenderer != null)
+            {
+                enemyRenderer.sortingOrder = 1; // Ensure it's rendered in Layer 1
+            }
+
             // Spawn on the left side
             if (randomSide == 0)
             {
                 spawnedEnemy.transform.position = leftPos.position;
                 spawnedEnemy.transform.localScale = enemyScale; // Normal direction
-                spawnedEnemy.GetComponent<Enemy>().speed = Random.Range(4,8); // Positive speed
+                spawnedEnemy.GetComponent<Enemy>().speed = Random.Range(2,6); // Positive speed
             }
             // Spawn on the right side
             else
             {
                 spawnedEnemy.transform.position = rightPos.position;
                 spawnedEnemy.transform.localScale = new Vector3(-enemyScale.x, enemyScale.y, enemyScale.z); // Flipped horizontally
-                spawnedEnemy.GetComponent<Enemy>().speed = -Random.Range(4,8); // Negative speed
+                spawnedEnemy.GetComponent<Enemy>().speed = -Random.Range(2,6); // Negative speed
             }
         }
     }
