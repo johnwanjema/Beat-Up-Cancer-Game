@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         if (isAttacking) return;
 
         movementX = Input.GetAxisRaw("Horizontal");
-        body.linearVelocity = new Vector2(movementX * speed, body.linearVelocity.y);
+        body.velocity = new Vector2(movementX * speed, body.velocity.y);
 
         if (movementX < 0)
         {
@@ -61,13 +61,13 @@ public class PlayerMovement : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && IsGrounded())
         {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, jumpingPower);
+            body.velocity = new Vector2(body.velocity.x, jumpingPower);
             anim.SetBool(JUMP_ANIMATION, true);
         }
 
-        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) && body.linearVelocity.y > 0)
+        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) && body.velocity.y > 0)
         {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y * 0.5f);
+            body.velocity = new Vector2(body.velocity.x, body.velocity.y * 0.5f);
         }
 
         // Attack inputs
@@ -93,7 +93,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void ShootArrow()
     {
-        GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
+        Vector3 spawnPosition = transform.position + new Vector3(sprite.flipX ? -1f : 1f, 0, 0);
+        GameObject arrow = Instantiate(arrowPrefab, spawnPosition, Quaternion.identity);
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
 
         // Determine direction based on player facing
