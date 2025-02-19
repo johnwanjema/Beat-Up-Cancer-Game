@@ -873,10 +873,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 10
+  speed: 15
   arrowPrefab: {fileID: 847246872091255939, guid: f5a23da1b84d34b7780da174a72ad095, type: 3}
-  shootingPoint: {fileID: 1173431648}
-  arrowSpeed: 10
+  arrowSpeed: 15
 --- !u!1 &222521385
 GameObject:
   m_ObjectHideFlags: 0
@@ -11217,6 +11216,14 @@ PrefabInstance:
     - target: {fileID: 4800232639010579059, guid: 341d2436ef83c4267a49aac007b48bf2, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212328878932263088, guid: 341d2436ef83c4267a49aac007b48bf2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212328878932263088, guid: 341d2436ef83c4267a49aac007b48bf2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 5212328878932263088, guid: 341d2436ef83c4267a49aac007b48bf2, type: 3}
       propertyPath: m_LocalPosition.x
