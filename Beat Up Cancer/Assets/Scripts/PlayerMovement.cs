@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float movementX;
 
     private const string WALK_ANIMATION = "run";
+    private const string JUMP_ANIMATION = "jump";
 
     // Attack animation triggers
     private const string ATTACK_1 = "attack_1"; 
@@ -57,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpingPower);
+            anim.SetBool(JUMP_ANIMATION, true);
         }
 
         if (Input.GetButtonUp("Jump") && body.linearVelocity.y > 0)
@@ -95,13 +97,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isAttacking) return; // Don't play movement animations while attacking
 
-        if (movementX != 0)
+        if (!IsGrounded())
         {
-            anim.SetBool(WALK_ANIMATION, true);
+            anim.SetBool(JUMP_ANIMATION, true);
         }
         else
         {
-            anim.SetBool(WALK_ANIMATION, false);
+            anim.SetBool(JUMP_ANIMATION, false);
+
+            if (movementX != 0)
+            {
+                anim.SetBool(WALK_ANIMATION, true);
+            }
+            else
+            {
+                anim.SetBool(WALK_ANIMATION, false);
+            }
         }
     }
 
