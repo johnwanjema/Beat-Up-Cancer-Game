@@ -16,6 +16,13 @@ public class PlayerMovement : MonoBehaviour
 
     private const string WALK_ANIMATION = "run";
 
+    // Attack animation triggers
+    private const string ATTACK_1 = "attack_1"; 
+    private const string ATTACK_2 = "attack_2";
+    private const string ATTACK_3 = "attack_3";
+
+    private bool isAttacking = false;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -26,12 +33,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movementX = Input.GetAxisRaw("Horizontal");
+        HandleInput();
+        AnimatePlayer();
+    }
 
-        // Apply velocity-based movement
+    private void HandleInput()
+    {
+        // If attacking, disable movement input
+        if (isAttacking) return;
+
+        movementX = Input.GetAxisRaw("Horizontal");
         body.linearVelocity = new Vector2(movementX * speed, body.linearVelocity.y);
 
-        // Flip sprite based on velocity
         if (movementX < 0)
         {
             sprite.flipX = true;
@@ -41,35 +54,50 @@ public class PlayerMovement : MonoBehaviour
             sprite.flipX = false;
         }
 
-        // Jumping
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpingPower);
         }
 
-        // Optional: Cut jump height if key is released early
         if (Input.GetButtonUp("Jump") && body.linearVelocity.y > 0)
         {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y * 0.5f); // Smooth cut
+            body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y * 0.5f);
         }
 
-        // Animate player movement
-        AnimatePlayer();
+        // Attack inputs
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            TriggerAttack(ATTACK_1);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TriggerAttack(ATTACK_2);
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            TriggerAttack(ATTACK_3);
+        }
     }
 
+    private void TriggerAttack(string attackTrigger)
+    {
+        isAttacking = true;
+        anim.SetTrigger(attackTrigger);
+    }
+
+    // This method is called from animation events at the end of attack animations
+    public void EndAttack()
+    {
+        isAttacking = false;
+    }
 
     private void AnimatePlayer()
     {
-        // Handle running animation and sprite flip
-        if (movementX > 0)
+        if (isAttacking) return; // Don't play movement animations while attacking
+
+        if (movementX != 0)
         {
             anim.SetBool(WALK_ANIMATION, true);
-            sprite.flipX = false;
-        }
-        else if (movementX < 0)
-        {
-            anim.SetBool(WALK_ANIMATION, true);
-            sprite.flipX = true;
         }
         else
         {
@@ -79,7 +107,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        // Raycast to check if player is on the ground
         RaycastHit2D raycastHit = Physics2D.BoxCast(
             boxCollider.bounds.center,
             boxCollider.bounds.size,
@@ -96,11 +123,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            // Check if player landed on enemy
             if (transform.position.y > collision.transform.position.y)
             {
                 Destroy(collision.gameObject);
-                // collision.gameObject.GetComponent<Enemy>().Die(); // Optional
             }
         }
     }
