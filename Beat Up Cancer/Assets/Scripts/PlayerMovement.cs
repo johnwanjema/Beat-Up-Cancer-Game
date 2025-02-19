@@ -24,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isAttacking = false;
 
+    [SerializeField] private GameObject arrowPrefab; // The arrow prefab
+    [SerializeField] private Transform shootingPoint; // The point from where the arrow is shot
+    [SerializeField] private float arrowSpeed = 10f; // Speed of the arrow
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -55,13 +59,13 @@ public class PlayerMovement : MonoBehaviour
             sprite.flipX = false;
         }
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && IsGrounded())
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpingPower);
             anim.SetBool(JUMP_ANIMATION, true);
         }
 
-        if (Input.GetButtonUp("Jump") && body.linearVelocity.y > 0)
+        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) && body.linearVelocity.y > 0)
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y * 0.5f);
         }
@@ -78,6 +82,31 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             TriggerAttack(ATTACK_3);
+        }
+
+        // Handle arrow shooting logic
+        if (Input.GetKeyDown(KeyCode.F)) // Press 'F' to shoot
+        {
+            ShootArrow();
+        }
+    }
+
+    private void ShootArrow()
+    {
+        GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
+        Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
+
+        // Determine direction based on player facing
+        float direction = sprite.flipX ? -1f : 1f;
+
+        // Set the velocity of the arrow
+        rb.linearVelocity = new Vector2(direction * arrowSpeed, 0f);
+
+        // Optional: Flip the arrow sprite if shooting left
+        SpriteRenderer arrowSprite = arrow.GetComponent<SpriteRenderer>();
+        if (direction < 0)
+        {
+            arrowSprite.flipX = true;
         }
     }
 

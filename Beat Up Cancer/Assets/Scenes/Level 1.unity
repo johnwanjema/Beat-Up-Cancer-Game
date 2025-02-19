@@ -874,6 +874,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 10
+  arrowPrefab: {fileID: 847246872091255939, guid: f5a23da1b84d34b7780da174a72ad095, type: 3}
+  shootingPoint: {fileID: 1173431648}
+  arrowSpeed: 10
 --- !u!1 &222521385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5680,7 +5683,7 @@ Transform:
   m_GameObject: {fileID: 985776771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.8, y: 3, z: 0}
+  m_LocalPosition: {x: 5.2, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6954,6 +6957,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1173431647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1173431648}
+  m_Layer: 0
+  m_Name: ShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1173431648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173431647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.85, y: -0.85, z: -0.033390265}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190599525
 GameObject:
   m_ObjectHideFlags: 0
@@ -11166,11 +11200,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 387441131144795599, guid: 341d2436ef83c4267a49aac007b48bf2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.05
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 387441131144795599, guid: 341d2436ef83c4267a49aac007b48bf2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.71
+      value: 1.03
       objectReference: {fileID: 0}
     - target: {fileID: 3028149811321767882, guid: 341d2436ef83c4267a49aac007b48bf2, type: 3}
       propertyPath: m_Constraints
@@ -11250,3 +11284,4 @@ SceneRoots:
   - {fileID: 1888658743}
   - {fileID: 1435415749}
   - {fileID: 8869434046250844205}
+  - {fileID: 1173431648}
