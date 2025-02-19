@@ -21,12 +21,12 @@ public class PlayerMovement : MonoBehaviour
     private const string ATTACK_1 = "attack_1"; 
     private const string ATTACK_2 = "attack_2";
     private const string ATTACK_3 = "attack_3";
+    private const string SHOOT_ARROW = "shoot_arrow";
 
     private bool isAttacking = false;
 
     [SerializeField] private GameObject arrowPrefab; // The arrow prefab
-    [SerializeField] private Transform shootingPoint; // The point from where the arrow is shot
-    [SerializeField] private float arrowSpeed = 10f; // Speed of the arrow
+    [SerializeField] private float arrowSpeed = 15f; // Speed of the arrow
 
     void Start()
     {
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         // Handle arrow shooting logic
         if (Input.GetKeyDown(KeyCode.F)) // Press 'F' to shoot
         {
-            ShootArrow();
+            anim.SetTrigger(SHOOT_ARROW);
         }
     }
 
