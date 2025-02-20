@@ -877,7 +877,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 847246872091255939, guid: f5a23da1b84d34b7780da174a72ad095, type: 3}
   arrowSpeed: 15
   attackPoint: {fileID: 1504328688}
-  attackRange: 0.5
+  attackRange: 1
   attackDamage: 25
 --- !u!4 &147734056 stripped
 Transform:
@@ -3897,67 +3897,6 @@ Transform:
   - {fileID: 730728593}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &746814026
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 812621037277027916, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576557171194861462, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_Name
-      value: Esophageal cancer
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576557171194861462, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
 --- !u!1 &756791982
 GameObject:
   m_ObjectHideFlags: 0
@@ -11363,4 +11302,3 @@ SceneRoots:
   - {fileID: 1888658743}
   - {fileID: 1435415749}
   - {fileID: 8869434046250844205}
-  - {fileID: 746814026}
