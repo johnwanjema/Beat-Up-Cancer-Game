@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform attackPoint; // Reference to the AttackPoint in the Inspector
     [SerializeField] private float attackRange = 1f; // Adjust the range as needed
-    [SerializeField] private int attackDamage = 10; // How much damage you deal
+    // [SerializeField] private int attackDamage = 10; // How much damage you deal
 
     void Start()
     {
@@ -80,15 +80,18 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             TriggerAttack(ATTACK_1);
-            PerformSwordAttack();
+            PerformSwordAttack(20);
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             TriggerAttack(ATTACK_2);
+            PerformSwordAttack(25);
+
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
             TriggerAttack(ATTACK_3);
+            PerformSwordAttack(50);
         }
 
         // Handle arrow shooting logic
@@ -177,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-   public void PerformSwordAttack()
+   public void PerformSwordAttack(int attackDamage)
     {
 
         // Detect all colliders within the attack range (without LayerMask)
