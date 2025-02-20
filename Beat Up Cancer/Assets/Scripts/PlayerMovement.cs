@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject arrowPrefab; // The arrow prefab
     [SerializeField] private float arrowSpeed = 15f; // Speed of the arrow
 
+    [SerializeField] private Transform attackPoint; // Reference to the AttackPoint in the Inspector
+    [SerializeField] private float attackRange = 0.5f; // Adjust the range as needed
+    [SerializeField] private int attackDamage = 10; // How much damage you deal
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -38,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        UpdateAttackPoint();
+       
+
         HandleInput();
         AnimatePlayer();
     }
@@ -48,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         if (isAttacking) return;
 
         movementX = Input.GetAxisRaw("Horizontal");
-        body.velocity = new Vector2(movementX * speed, body.velocity.y);
+        body.linearVelocity = new Vector2(movementX * speed, body.linearVelocity.y);
 
         if (movementX < 0)
         {
@@ -61,19 +68,20 @@ public class PlayerMovement : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && IsGrounded())
         {
-            body.velocity = new Vector2(body.velocity.x, jumpingPower);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, jumpingPower);
             anim.SetBool(JUMP_ANIMATION, true);
         }
 
-        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) && body.velocity.y > 0)
+        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) && body.linearVelocity.y > 0)
         {
-            body.velocity = new Vector2(body.velocity.x, body.velocity.y * 0.5f);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y * 0.5f);
         }
 
         // Attack inputs
         if (Input.GetKeyDown(KeyCode.Q))
         {
             TriggerAttack(ATTACK_1);
+            PerformSwordAttack();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -93,8 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ShootArrow()
     {
-        Vector3 spawnPosition = transform.position + new Vector3(sprite.flipX ? -1f : 1f, 0, 0);
-        GameObject arrow = Instantiate(arrowPrefab, spawnPosition, Quaternion.identity);
+        GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
 
         // Determine direction based on player facing
@@ -170,4 +177,59 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+   public void PerformSwordAttack()
+    {
+        Debug.Log("Performing Sword Attack");
+
+        // float xOffset = transform.localScale.x > 0 ? 1f : -1f; ; // Adjust this as per your needs
+        // float yOffset = 0f; // Adjust vertically if needed
+
+
+        // attackPoint.position = transform.position + new Vector3(xOffset, yOffset, 0);
+
+        
+
+
+        // Detect all colliders within the attack range (without LayerMask)
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
+
+        // Loop through the detected colliders
+        foreach (Collider2D collider in hitColliders)
+        {
+            Debug.Log("Performing Sword Attack");
+            
+            // Check if the collider has the "Enemy" tag
+            if (collider.CompareTag("Enemy"))
+            {
+                // Try to get the Enemy script and apply damage
+                Enemy enemy = collider.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(attackDamage);
+                    Debug.Log($"Hit {collider.name} for  damage.");
+                }
+                else
+                {
+                    Debug.LogWarning($"{collider.name} is tagged as 'Enemy' but has no Enemy script.");
+                }
+            }
+        }
+    }
+
+   void OnDrawGizmos()
+    {
+        if (attackPoint != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        }
+    }
+
+    void UpdateAttackPoint()
+    {
+        float direction = sprite.flipX ? -1f : 1f;
+        attackPoint.localPosition = new Vector3(Mathf.Abs(attackPoint.localPosition.x) * direction, attackPoint.localPosition.y, attackPoint.localPosition.z);
+    }
+
 }
