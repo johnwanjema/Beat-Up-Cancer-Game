@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float arrowSpeed = 15f; // Speed of the arrow
 
     [SerializeField] private Transform attackPoint; // Reference to the AttackPoint in the Inspector
-    [SerializeField] private float attackRange = 0.5f; // Adjust the range as needed
+    [SerializeField] private float attackRange = 1f; // Adjust the range as needed
     [SerializeField] private int attackDamage = 10; // How much damage you deal
 
     void Start()
@@ -180,16 +180,6 @@ public class PlayerMovement : MonoBehaviour
 
    public void PerformSwordAttack()
     {
-        Debug.Log("Performing Sword Attack");
-
-        // float xOffset = transform.localScale.x > 0 ? 1f : -1f; ; // Adjust this as per your needs
-        // float yOffset = 0f; // Adjust vertically if needed
-
-
-        // attackPoint.position = transform.position + new Vector3(xOffset, yOffset, 0);
-
-        
-
 
         // Detect all colliders within the attack range (without LayerMask)
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
@@ -197,8 +187,6 @@ public class PlayerMovement : MonoBehaviour
         // Loop through the detected colliders
         foreach (Collider2D collider in hitColliders)
         {
-            Debug.Log("Performing Sword Attack");
-            
             // Check if the collider has the "Enemy" tag
             if (collider.CompareTag("Enemy"))
             {
@@ -207,7 +195,6 @@ public class PlayerMovement : MonoBehaviour
                 if (enemy != null)
                 {
                     enemy.TakeDamage(attackDamage);
-                    Debug.Log($"Hit {collider.name} for  damage.");
                 }
                 else
                 {
