@@ -43,10 +43,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         UpdateAttackPoint();
-       
-
         HandleInput();
-        AnimatePlayer();
+        // TODO : fix player animation
+        // AnimatePlayer();
     }
 
     private void HandleInput()
@@ -69,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && IsGrounded())
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpingPower);
-            anim.SetBool(JUMP_ANIMATION, true);
+            // anim.SetBool(JUMP_ANIMATION, true);
         }
 
         if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) && body.linearVelocity.y > 0)
