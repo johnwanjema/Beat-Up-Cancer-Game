@@ -53,14 +53,14 @@ public class EnemySpawner : MonoBehaviour
             {
                 spawnedEnemy.transform.position = leftPos.position;
                 spawnedEnemy.transform.localScale = enemyScale; // Normal direction
-                spawnedEnemy.GetComponent<Enemy>().speed = Random.Range(2,6); // Positive speed
+                spawnedEnemy.GetComponent<Enemy>().speed = Random.Range(2,4); // Positive speed
             }
             // Spawn on the right side
             else
             {
                 spawnedEnemy.transform.position = rightPos.position;
                 spawnedEnemy.transform.localScale = new Vector3(-enemyScale.x, enemyScale.y, enemyScale.z); // Flipped horizontally
-                spawnedEnemy.GetComponent<Enemy>().speed = -Random.Range(2,6); // Negative speed
+                spawnedEnemy.GetComponent<Enemy>().speed = -Random.Range(2,4); // Negative speed
             }
         }
     }

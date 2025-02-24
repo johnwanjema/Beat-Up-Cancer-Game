@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
     [HideInInspector]
     public  float speed;
+    public  int health = 100;
 
     private Rigidbody2D mybody;
 
@@ -28,4 +29,15 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        // Example logic
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
