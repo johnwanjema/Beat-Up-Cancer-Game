@@ -32,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float attackRange = 1f; // Adjust the range as needed
     // [SerializeField] private int attackDamage = 10; // How much damage you deal
 
+    public float minX = -10f; // Left boundary
+    public float maxX = 10f;  // Right boundary
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -44,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
     {
         UpdateAttackPoint();
         HandleInput();
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, minX, maxX); // Restrict movement
+        transform.position = pos;
         // TODO : fix player animation
         // AnimatePlayer();
     }
