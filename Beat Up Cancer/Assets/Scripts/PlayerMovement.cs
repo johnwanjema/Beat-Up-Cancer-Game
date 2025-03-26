@@ -14,19 +14,16 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 9f;
     private float movementX;
 
-    private const string WALK_ANIMATION = "run";
+    private const string RUN_ANIMATION = "run";
     private const string JUMP_ANIMATION = "jump";
 
     // Attack animation triggers
     private const string ATTACK_1 = "attack_1"; 
     private const string ATTACK_2 = "attack_2";
     private const string ATTACK_3 = "attack_3";
-    private const string SHOOT_ARROW = "shoot_arrow";
 
     private bool isAttacking = false;
 
-    [SerializeField] private GameObject arrowPrefab; // The arrow prefab
-    [SerializeField] private float arrowSpeed = 15f; // Speed of the arrow
 
     [SerializeField] private Transform attackPoint; // Reference to the AttackPoint in the Inspector
     [SerializeField] private float attackRange = 1f; // Adjust the range as needed
@@ -100,32 +97,9 @@ public class PlayerMovement : MonoBehaviour
             PerformSwordAttack(50);
         }
 
-        // Handle arrow shooting logic
-        if (Input.GetKeyDown(KeyCode.F)) // Press 'F' to shoot
-        {
-            anim.SetTrigger(SHOOT_ARROW);
-        }
     }
 
-    private void ShootArrow()
-    {
-        GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
-        Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
-
-        // Determine direction based on player facing
-        float direction = sprite.flipX ? -1f : 1f;
-
-        // Set the velocity of the arrow
-        rb.linearVelocity = new Vector2(direction * arrowSpeed, 0f);
-
-        // Optional: Flip the arrow sprite if shooting left
-        SpriteRenderer arrowSprite = arrow.GetComponent<SpriteRenderer>();
-        if (direction < 0)
-        {
-            arrowSprite.flipX = true;
-        }
-    }
-
+  
     private void TriggerAttack(string attackTrigger)
     {
         isAttacking = true;
@@ -152,11 +126,11 @@ public class PlayerMovement : MonoBehaviour
 
             if (movementX != 0)
             {
-                anim.SetBool(WALK_ANIMATION, true);
+                anim.SetBool(RUN_ANIMATION, true);
             }
             else
             {
-                anim.SetBool(WALK_ANIMATION, false);
+                anim.SetBool(RUN_ANIMATION, false);
             }
         }
     }
