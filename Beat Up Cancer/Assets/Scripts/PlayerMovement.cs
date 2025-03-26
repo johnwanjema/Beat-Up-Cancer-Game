@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 9f;
     private float movementX;
 
-    private const string WALK_ANIMATION = "run";
+    private const string RUN_ANIMATION = "run";
     private const string JUMP_ANIMATION = "jump";
 
     // Attack animation triggers
@@ -152,11 +152,11 @@ public class PlayerMovement : MonoBehaviour
 
             if (movementX != 0)
             {
-                anim.SetBool(WALK_ANIMATION, true);
+                anim.SetBool(RUN_ANIMATION, true);
             }
             else
             {
-                anim.SetBool(WALK_ANIMATION, false);
+                anim.SetBool(RUN_ANIMATION, false);
             }
         }
     }
