@@ -7226,7 +7226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyReference:
-  - {fileID: 5576557171194861462, guid: 080556c7f05fb4902a5eff9b769c9abc, type: 3}
+  - {fileID: 5576557171194861462, guid: f327c37e6155240858f057403d997f4c, type: 3}
   leftPos: {fileID: 1417647721}
   rightPos: {fileID: 1332147391}
 --- !u!1 &1198019443
