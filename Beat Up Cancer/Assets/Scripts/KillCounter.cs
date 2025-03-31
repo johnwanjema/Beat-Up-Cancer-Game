@@ -17,6 +17,11 @@ public class KillCounter : MonoBehaviour
         DisplayProgress(kills);
     }
 
+    public void IncrementKill()
+    {
+        kills += 1;
+    }
+
     void DisplayProgress(int kills)
     {
         killCounter.text = string.Format("Cancer Cells Killed: {0}/10", kills);
