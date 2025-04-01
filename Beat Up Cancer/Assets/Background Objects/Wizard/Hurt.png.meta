@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 5910ed5198ee745a48042b14fae2376d
+guid: 87101afe47e324cf0b8c6c70ebd5dc38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8722348331080665912
-    second: esophageal cancer_0
+      213: -2048800907179887802
+    second: Hurt_0
+  - first:
+      213: 490842205202310979
+    second: Hurt_1
+  - first:
+      213: -3720053754089064719
+    second: Hurt_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: esophageal cancer_0
+      name: Hurt_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 33
         y: 0
-        width: 932
-        height: 747
+        width: 32
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c437b6e76ef3f680800000000000000
-      internalID: -8722348331080665912
+      spriteID: 6437b001e623193e0800000000000000
+      internalID: -2048800907179887802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3476ad19262dfc600800000000000000
+      internalID: 490842205202310979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt_2
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 0
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6b92202d6bf5cc0800000000000000
+      internalID: -3720053754089064719
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      esophageal cancer_0: -8722348331080665912
+      Hurt_0: -2048800907179887802
+      Hurt_1: 490842205202310979
+      Hurt_2: -3720053754089064719
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
