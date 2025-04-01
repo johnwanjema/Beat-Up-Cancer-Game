@@ -1021,7 +1021,7 @@ MonoBehaviour:
   players:
   - {fileID: 7559194836420186697, guid: 30cabe766648f41699738b60d9d04d24, type: 3}
   - {fileID: 4800232639010579059, guid: 341d2436ef83c4267a49aac007b48bf2, type: 3}
-  - {fileID: 6908687137744131066, guid: dbf93f0432ceea443b9355ae2855c5c8, type: 3}
+  - {fileID: 5869172538447007649, guid: fabaa8dfbba834fd2a6fa5d396fa1ddb, type: 3}
 --- !u!4 &420674049
 Transform:
   m_ObjectHideFlags: 0
@@ -4096,7 +4096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4723107735738678597, guid: 31d482c9c3ce248998911e6bdfa86c33, type: 3}
+  m_Sprite: {fileID: 4723107735738678597, guid: 143cf4cfffe914a48853d12105fecaad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
