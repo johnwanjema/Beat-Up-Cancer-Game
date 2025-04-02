@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
     public float minX = -10f; // Left boundary
     public float maxX = 10f;  // Right boundary
 
+    public Transform firePoint; // Point where the fireball is spawned
+    public GameObject fireballPrefab; // Drag your FireballPrefab here
+
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -199,6 +203,13 @@ public class PlayerMovement : MonoBehaviour
     {
         float direction = sprite.flipX ? -1f : 1f;
         attackPoint.localPosition = new Vector3(Mathf.Abs(attackPoint.localPosition.x) * direction, attackPoint.localPosition.y, attackPoint.localPosition.z);
+        firePoint.localPosition = new Vector3(Mathf.Abs(firePoint.localPosition.x) * direction, firePoint.localPosition.y, firePoint.localPosition.z);
+    }
+
+
+    void CastFireball()
+    {
+        Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
     }
 
 }
