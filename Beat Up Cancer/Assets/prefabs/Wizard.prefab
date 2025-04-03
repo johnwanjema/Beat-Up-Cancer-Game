@@ -239,8 +239,8 @@ MonoBehaviour:
   attackRange: 1
   minX: -97
   maxX: 79
-  firePoint: {fileID: 0}
-  fireballPrefab: {fileID: 0}
+  firePoint: {fileID: 4732409416602394844}
+  fireballPrefab: {fileID: 6150901931291250485, guid: 75c3d95e80aa14563bcb850d9830ce50, type: 3}
 --- !u!1 &8840638423735164982
 GameObject:
   m_ObjectHideFlags: 0
