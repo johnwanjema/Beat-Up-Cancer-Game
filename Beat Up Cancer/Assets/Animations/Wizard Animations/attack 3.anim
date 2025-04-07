@@ -36,6 +36,16 @@ AnimationClip:
       value: {fileID: -1711208824211276139, guid: 56a4f0a4f5a664e6d80c398129c17074, type: 3}
     - time: 0.29166666
       value: {fileID: -3769374411695510437, guid: 56a4f0a4f5a664e6d80c398129c17074, type: 3}
+    - time: 0.33333334
+      value: {fileID: 1905417572217150490, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
+    - time: 0.375
+      value: {fileID: 6124931126438338997, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
+    - time: 0.41666666
+      value: {fileID: 5862354036684096429, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
+    - time: 0.45833334
+      value: {fileID: 204132811695256350, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
+    - time: 0.5
+      value: {fileID: 4970080592206777693, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -66,12 +76,17 @@ AnimationClip:
     - {fileID: -4701697456131926120, guid: 56a4f0a4f5a664e6d80c398129c17074, type: 3}
     - {fileID: -1711208824211276139, guid: 56a4f0a4f5a664e6d80c398129c17074, type: 3}
     - {fileID: -3769374411695510437, guid: 56a4f0a4f5a664e6d80c398129c17074, type: 3}
+    - {fileID: 1905417572217150490, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
+    - {fileID: 6124931126438338997, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
+    - {fileID: 5862354036684096429, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
+    - {fileID: 204132811695256350, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
+    - {fileID: 4970080592206777693, guid: 0ed37f75d3df84f20864358e1174d51e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.3333333
+    m_StopTime: 0.5833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -91,8 +106,15 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.29166666
+  - time: 0.5416667
     functionName: EndAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5833333
+    functionName: CastFireball
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

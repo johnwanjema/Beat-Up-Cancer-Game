@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            controller.IncrementKill();
+            // controller.IncrementKill();
             Destroy(gameObject);
         }
     }
