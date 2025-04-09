@@ -5,6 +5,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public int score = 0;
+    public int killStreak = 0;
+    public int multiplier = 1;
+
     [SerializeField]
     private GameObject [] players;
 
@@ -35,5 +39,14 @@ public class GameManager : MonoBehaviour
         if(scene.name == "Level 1"){
             Instantiate(players[charIndex]);
         }
+    }
+    public void ScoreIncrement(int points){
+        score += points * multiplier;   //add point amount of enemy with multiplier effect
+        killStreak++;
+        if(killStreak >= 5){            //multiplier increases every 5 kills without getting hit
+            killStreak = 0;
+            multiplier++;
+        }
+        print(score);                   //still need to display score, accessible as GameManager.instance.score
     }
 }
