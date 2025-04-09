@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "PlayerHitbox") {
+            GameManager.instance.ScoreIncrement(100);
             Destroy(gameObject);
         }
     }
@@ -38,6 +39,8 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             // controller.IncrementKill();
+            // KillCounter.instance.IncrementKill();
+            GameManager.instance.ScoreIncrement(100);
             Destroy(gameObject);
         }
     }
