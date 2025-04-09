@@ -5,7 +5,6 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public  float speed;
     public  int health = 100;
-    public KillCounter controller;
 
     private Rigidbody2D mybody;
 
@@ -38,8 +37,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            // controller.IncrementKill();
-            // KillCounter.instance.IncrementKill();
+            KillCounter.kills += 1;
             GameManager.instance.ScoreIncrement(100);
             Destroy(gameObject);
         }

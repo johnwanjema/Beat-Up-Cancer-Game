@@ -4,8 +4,7 @@ using TMPro;
 public class KillCounter : MonoBehaviour
 {
     public TMP_Text killCounter;
-    public static KillCounter instance;
-    public int kills;
+    public static int kills = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,16 +13,6 @@ public class KillCounter : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        DisplayProgress(kills);
-    }
-
-    public void IncrementKill()
-    {
-        kills += 1;
-    }
-
-    void DisplayProgress(int kills)
     {
         killCounter.text = string.Format("Cancer Cells Killed: {0}/10", kills);
     }
