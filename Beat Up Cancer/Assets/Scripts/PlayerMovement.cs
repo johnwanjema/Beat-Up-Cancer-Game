@@ -159,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (transform.position.y > collision.transform.position.y)
             {
+                KillCounter.kills += 1;
                 Destroy(collision.gameObject);
             }
         }
