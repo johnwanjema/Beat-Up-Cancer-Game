@@ -203,7 +203,9 @@ public class PlayerMovement : MonoBehaviour
     {
         float direction = sprite.flipX ? -1f : 1f;
         attackPoint.localPosition = new Vector3(Mathf.Abs(attackPoint.localPosition.x) * direction, attackPoint.localPosition.y, attackPoint.localPosition.z);
-        firePoint.localPosition = new Vector3(Mathf.Abs(firePoint.localPosition.x) * direction, firePoint.localPosition.y, firePoint.localPosition.z);
+        if(firePoint){
+            firePoint.localPosition = new Vector3(Mathf.Abs(firePoint.localPosition.x) * direction, firePoint.localPosition.y, firePoint.localPosition.z);
+        } 
     }
 
 
