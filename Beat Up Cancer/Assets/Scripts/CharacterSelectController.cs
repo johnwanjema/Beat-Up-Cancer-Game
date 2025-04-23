@@ -10,7 +10,7 @@ public class characterSelect : MonoBehaviour
 
         GameManager.instance.charIndex = selectedCharacter;
        
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("L1-CancerInfo");
     
     }
 }
