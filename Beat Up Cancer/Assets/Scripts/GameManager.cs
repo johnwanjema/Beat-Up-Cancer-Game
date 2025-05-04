@@ -35,8 +35,9 @@ public class GameManager : MonoBehaviour
     private void OnDisable(){
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
+
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode){
-        if(scene.name == "Level 1"){
+        if(scene.name == "Level 1" || scene.name == "Level 2" ){
             Instantiate(players[charIndex]);
         }
     }
