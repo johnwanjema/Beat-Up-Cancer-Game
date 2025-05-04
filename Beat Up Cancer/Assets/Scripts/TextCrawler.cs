@@ -7,7 +7,7 @@ public class TextCrawler : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private float _scrollSpeed = 20f;
-    [SerializeField] private float _waitTime = 10f; // Time before scene loads
+    [SerializeField] private float _waitTime = 13f; // Time before scene loads
 
     private void Start()
     {
