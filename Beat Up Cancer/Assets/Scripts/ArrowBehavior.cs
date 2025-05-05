@@ -8,6 +8,7 @@ public class ArrowBehavior : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             // Destroy the enemy object
+            KillCounter.kills += 1;
             Destroy(collision.gameObject);
 
             // Destroy the arrow after hitting the enemy
