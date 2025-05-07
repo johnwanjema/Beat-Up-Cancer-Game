@@ -9,8 +9,13 @@ public class TextCrawler : MonoBehaviour
     [SerializeField] private float _scrollSpeed = 20f;
     [SerializeField] private float _waitTime = 13f; // Time before scene loads
 
+    [Tooltip("Name of the next scene to load")]
+    [SerializeField] private string _nextSceneName;
+
+
     private void Start()
-    {
+    {   
+        Time.timeScale = 1f;
         StartCoroutine(LoadNextSceneAfterDelay());
     }
 
@@ -22,8 +27,16 @@ public class TextCrawler : MonoBehaviour
 
     private IEnumerator LoadNextSceneAfterDelay()
     {
-        yield return new WaitForSeconds(_waitTime);
+        yield return new WaitForSecondsRealtime(_waitTime);
 
-        SceneManager.LoadScene("Level 1");
+        if (!string.IsNullOrEmpty(_nextSceneName))
+        {
+            Time.timeScale = 1f; // Ensure normal time
+            SceneManager.LoadScene(_nextSceneName);
+        }
+        else
+        {
+            Debug.LogError("Next scene name is not set on TextCrawler!");
+        }
     }
 }

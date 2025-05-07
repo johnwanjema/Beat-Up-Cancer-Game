@@ -835,6 +835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollSpeed: 30
   _waitTime: 13
+  _nextSceneName: Level 3
 --- !u!114 &1312526098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,7 +875,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1312526100
 Canvas:
   m_ObjectHideFlags: 0

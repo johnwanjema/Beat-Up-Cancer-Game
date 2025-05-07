@@ -468,6 +468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollSpeed: 30
   _waitTime: 13
+  _nextSceneName: Level 1
 --- !u!1 &686541540
 GameObject:
   m_ObjectHideFlags: 0
