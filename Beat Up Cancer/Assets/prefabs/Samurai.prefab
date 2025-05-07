@@ -92,7 +92,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -239,6 +239,8 @@ MonoBehaviour:
   attackRange: 1
   minX: -97
   maxX: 79
+  firePoint: {fileID: 0}
+  fireballPrefab: {fileID: 0}
 --- !u!114 &2210129057104246688
 MonoBehaviour:
   m_ObjectHideFlags: 0
