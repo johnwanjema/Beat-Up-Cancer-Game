@@ -24171,7 +24171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &683418818
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43499,13 +43499,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2091812747}
   - {fileID: 683418819}
   - {fileID: 1675274982}
   - {fileID: 1763534474}
   - {fileID: 1464044129}
   - {fileID: 2059228488}
   - {fileID: 785257586}
-  - {fileID: 2091812747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199084539
@@ -60608,7 +60608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1675274981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64077,7 +64077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1763534473
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -75073,7 +75073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2091812746
 SpriteRenderer:
   m_ObjectHideFlags: 0
