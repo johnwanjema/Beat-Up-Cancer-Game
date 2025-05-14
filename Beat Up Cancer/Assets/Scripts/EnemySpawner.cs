@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             // Wait for a random amount of time between spawns
-            yield return new WaitForSeconds(Random.Range(4, 8));
+            yield return new WaitForSeconds(Random.Range(3, 6));
 
             // Choose a random enemy and a random side
             randomIndex = Random.Range(0, enemyReference.Length);
