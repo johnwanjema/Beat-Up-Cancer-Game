@@ -153,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
         return raycastHit.collider != null;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    /*void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -163,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
-    }
+    }*/
 
    public void PerformSwordAttack(int attackDamage)
     {
