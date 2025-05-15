@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
             spawnedEnemy = Instantiate(enemyReference[randomIndex]);
 
             // Set size and direction
-            Vector3 enemyScale = new Vector3(0.2f, 0.2f, 1f); // Uniform scale for all enemies
+            Vector3 enemyScale = new Vector3(0.6f, 0.6f, 1f); // Uniform scale for all enemies
 
             // Get the SpriteRenderer component and set sorting order
             SpriteRenderer enemyRenderer = spawnedEnemy.GetComponent<SpriteRenderer>();

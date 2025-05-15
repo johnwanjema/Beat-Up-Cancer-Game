@@ -6089,7 +6089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyReference:
-  - {fileID: 5576557171194861462, guid: f327c37e6155240858f057403d997f4c, type: 3}
+  - {fileID: 3827268146858465965, guid: 65ea03a55ef7fa1448af2b925dc18241, type: 3}
   leftPos: {fileID: 1417647721}
   rightPos: {fileID: 1332147391}
 --- !u!1 &1198019443
