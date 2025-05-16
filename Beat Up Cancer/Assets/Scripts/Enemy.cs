@@ -23,14 +23,14 @@ public class Enemy : MonoBehaviour
     {
         // velocity as a force to move player up
         // move enemy on the x- axis 
+        if (IsGrounded() || (mybody.linearVelocity.x == 0 && mybody.linearVelocity.y == 0)) {
+            mybody.linearVelocity = new Vector2(mybody.linearVelocity.x, jumpSpeed);
+        }
         mybody.linearVelocity = new Vector2(speed,mybody.linearVelocity.y);
         if (flashCooldown <= 0) {
             GetComponent<SpriteRenderer>().color = Color.white;
         } else {
             flashCooldown -= Time.deltaTime;
-        }
-        if (IsGrounded() || mybody.linearVelocity.x == 0) {
-            mybody.linearVelocity = new Vector2(mybody.linearVelocity.x, jumpSpeed);
         }
     }
 

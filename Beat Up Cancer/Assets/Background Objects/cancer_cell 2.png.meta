@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cancer_cell 2_0: 7517959438381981611
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

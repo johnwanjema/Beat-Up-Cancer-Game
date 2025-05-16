@@ -236,7 +236,7 @@ MonoBehaviour:
     m_Bits: 64
   speed: 15
   attackPoint: {fileID: 8933023740276056941}
-  attackRange: 1
+  attackRange: 2
   minX: -97
   maxX: 79
   firePoint: {fileID: 4732409416602394844}

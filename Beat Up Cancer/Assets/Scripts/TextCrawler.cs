@@ -23,6 +23,10 @@ public class TextCrawler : MonoBehaviour
     void Update()
     {
         transform.Translate(Camera.main.transform.up * _scrollSpeed * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene(_nextSceneName);
+        }
     }
 
     private IEnumerator LoadNextSceneAfterDelay()
