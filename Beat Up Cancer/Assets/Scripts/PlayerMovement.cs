@@ -87,12 +87,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             TriggerAttack(ATTACK_1);
-            PerformSwordAttack(20);
+            PerformSwordAttack(30);
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
             TriggerAttack(ATTACK_2);
-            PerformSwordAttack(25);
+            PerformSwordAttack(40);
 
         }
         if (Input.GetKeyDown(KeyCode.C))
