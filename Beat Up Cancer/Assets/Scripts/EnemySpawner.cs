@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     private Transform leftPos, rightPos;
 
     private int randomIndex;  // Random enemy type index
-    private int randomSide;   // Random side (0 for left, 1 for right)
+    private int altSide = -1;   // Alternates side (-1 for left, 1 for right), first will be right
 
     void Start()
     {
@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
 
             // Choose a random enemy and a random side
             randomIndex = Random.Range(0, enemyReference.Length);
-            randomSide = Random.Range(0, 2);
+            altSide *= -1;
 
             // Instantiate the enemy
             spawnedEnemy = Instantiate(enemyReference[randomIndex]);
@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
             }
 
             // Spawn on the left side
-            if (randomSide == 0)
+            if (altSide == -1)
             {
                 spawnedEnemy.transform.position = leftPos.position;
                 spawnedEnemy.transform.localScale = enemyScale; // Normal direction
