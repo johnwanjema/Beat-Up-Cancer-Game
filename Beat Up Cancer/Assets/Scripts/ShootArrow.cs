@@ -19,7 +19,7 @@ public class ShootArrow : MonoBehaviour
     void Update()
     {
         // Handle arrow shooting logic
-        if (Input.GetKeyDown(KeyCode.F)) // Press 'F' to shoot
+        if (Input.GetKeyDown(KeyCode.V)) // Press 'F' to shoot
         {
             anim.SetTrigger(SHOOT_ARROW);
         }

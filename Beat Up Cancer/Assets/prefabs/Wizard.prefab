@@ -237,8 +237,8 @@ MonoBehaviour:
   speed: 15
   attackPoint: {fileID: 8933023740276056941}
   attackRange: 2
-  minX: -97
-  maxX: 79
+  minX: -40
+  maxX: 50
   firePoint: {fileID: 4732409416602394844}
   fireballPrefab: {fileID: 6150901931291250485, guid: 75c3d95e80aa14563bcb850d9830ce50, type: 3}
 --- !u!1 &8840638423735164982
