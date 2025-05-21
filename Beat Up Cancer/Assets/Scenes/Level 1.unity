@@ -315,7 +315,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.073, y: 0.026}
+  m_AnchoredPosition: {x: -0.081, y: 0.041}
   m_SizeDelta: {x: 1044.43, y: 115.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &25241391
@@ -339,6 +339,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Level Complete
+
+
+    elim bonus
 
 
     Time bonus
@@ -6924,7 +6927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.073013306, y: 0.026002884}
+  m_AnchoredPosition: {x: -0.051738, y: 0.02}
   m_SizeDelta: {x: 1044.43, y: 115.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345075849
@@ -7016,7 +7019,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -227.02032, w: 0}
+  m_margin: {x: 0, y: 0, z: -189.04742, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

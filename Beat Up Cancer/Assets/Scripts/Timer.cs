@@ -6,6 +6,8 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 0;
     public bool timeIsRunning = true;
     public TMP_Text timeText;
+    public static float minutes = 0;
+    public static float seconds = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,8 +30,8 @@ public class Timer : MonoBehaviour
     void DisplayTime (float timeToDisplay)
     {
         timeToDisplay += 1;
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
     }
 }
