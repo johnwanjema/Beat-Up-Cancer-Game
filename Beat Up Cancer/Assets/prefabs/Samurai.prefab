@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 7638487105901675732}
   - component: {fileID: 2210129057104246688}
   - component: {fileID: 7378643237903704805}
-  - component: {fileID: 7378643237903704805}
   m_Layer: 0
   m_Name: Samurai
   m_TagString: Player
@@ -243,6 +242,10 @@ MonoBehaviour:
   maxX: 70
   firePoint: {fileID: 0}
   fireballPrefab: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 918003d4ccd2d46aba0b9592a79f7e4c, type: 3}
+  fireBallSound: {fileID: 0}
+  fireArrowSound: {fileID: 8300000, guid: d73672b091933491cb999687d62cfef0, type: 3}
+  soundCooldown: 0.5
 --- !u!114 &2210129057104246688
 MonoBehaviour:
   m_ObjectHideFlags: 0

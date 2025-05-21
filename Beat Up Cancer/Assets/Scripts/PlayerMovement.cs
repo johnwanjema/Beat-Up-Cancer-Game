@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip attackSound;
     public AudioClip fireBallSound;
+    public AudioClip fireArrowSound;
 
     private float lastSoundTime = 0f;
     public float soundCooldown = 5f; // half a second cooldown
@@ -234,10 +235,19 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void PlayAttackSound()
-    {   
+    {
         if (Time.time - lastSoundTime > soundCooldown)
         {
             audioSource.PlayOneShot(attackSound);
+            lastSoundTime = Time.time;
+        }
+    }
+    
+    public void PlayArrowSound()
+    {   
+        if (Time.time - lastSoundTime > soundCooldown)
+        {
+            audioSource.PlayOneShot(fireArrowSound);
             lastSoundTime = Time.time;
         }
     }
