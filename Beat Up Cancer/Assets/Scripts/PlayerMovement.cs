@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private const string JUMP_ANIMATION = "jump";
 
     // Attack animation triggers
-    private const string ATTACK_1 = "attack_1"; 
+    private const string ATTACK_1 = "attack_1";
     private const string ATTACK_2 = "attack_2";
     private const string ATTACK_3 = "attack_3";
 
@@ -35,6 +35,12 @@ public class PlayerMovement : MonoBehaviour
     public Transform firePoint; // Point where the fireball is spawned
     public GameObject fireballPrefab; // Drag your FireballPrefab here
 
+    private AudioSource audioSource;
+    public AudioClip attackSound;
+    public AudioClip fireBallSound;
+
+    private float lastSoundTime = 0f;
+    public float soundCooldown = 5f; // half a second cooldown
 
     void Start()
     {
@@ -43,6 +49,12 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
 
     void Update()
     {
@@ -103,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-  
+
     private void TriggerAttack(string attackTrigger)
     {
         isAttacking = true;
@@ -165,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }*/
 
-   public void PerformSwordAttack(int attackDamage)
+    public void PerformSwordAttack(int attackDamage)
     {
 
         // Detect all colliders within the attack range (without LayerMask)
@@ -191,7 +203,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-   void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         if (attackPoint != null)
         {
@@ -204,15 +216,30 @@ public class PlayerMovement : MonoBehaviour
     {
         float direction = sprite.flipX ? -1f : 1f;
         attackPoint.localPosition = new Vector3(Mathf.Abs(attackPoint.localPosition.x) * direction, attackPoint.localPosition.y, attackPoint.localPosition.z);
-        if(firePoint){
+        if (firePoint)
+        {
             firePoint.localPosition = new Vector3(Mathf.Abs(firePoint.localPosition.x) * direction, firePoint.localPosition.y, firePoint.localPosition.z);
-        } 
+        }
     }
 
 
     void CastFireball()
     {
         Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
+        if (Time.time - lastSoundTime > soundCooldown)
+        {
+            audioSource.PlayOneShot(fireBallSound);
+            lastSoundTime = Time.time;
+        }
+    }
+
+    public void PlayAttackSound()
+    {   
+        if (Time.time - lastSoundTime > soundCooldown)
+        {
+            audioSource.PlayOneShot(attackSound);
+            lastSoundTime = Time.time;
+        }
     }
 
 }
