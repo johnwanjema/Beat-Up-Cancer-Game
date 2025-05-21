@@ -62739,6 +62739,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4279242769
       objectReference: {fileID: 0}
+    - target: {fileID: 1258794458255509532, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1301959265593385922, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
       value: 0.008766486
@@ -62851,6 +62855,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4279440150
       objectReference: {fileID: 0}
+    - target: {fileID: 5646923970201166822, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1694420331}
     - target: {fileID: 6287715748668059874, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
       value: 0.03577783
@@ -62882,6 +62890,10 @@ PrefabInstance:
     - target: {fileID: 6443506681854278184, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278913804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883154980185006860, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
