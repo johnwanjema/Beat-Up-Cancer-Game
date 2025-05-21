@@ -6900,6 +6900,7 @@ GameObject:
   - component: {fileID: 1345075848}
   - component: {fileID: 1345075850}
   - component: {fileID: 1345075849}
+  - component: {fileID: 1345075851}
   m_Layer: 5
   m_Name: Points
   m_TagString: Untagged
@@ -7029,6 +7030,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345075847}
   m_CullTransparentMesh: 1
+--- !u!114 &1345075851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345075847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a412b71d35fb25d4ba414db6cfce6725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsOutput: {fileID: 1345075849}
 --- !u!1 &1417647720
 GameObject:
   m_ObjectHideFlags: 0
