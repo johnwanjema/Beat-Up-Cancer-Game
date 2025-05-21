@@ -239,7 +239,7 @@ MonoBehaviour:
   attackPoint: {fileID: 8933023740276056941}
   attackRange: 2
   minX: -40
-  maxX: 50
+  maxX: 70
   firePoint: {fileID: 4732409416602394844}
   fireballPrefab: {fileID: 6150901931291250485, guid: 75c3d95e80aa14563bcb850d9830ce50, type: 3}
   attackSound: {fileID: 8300000, guid: 918003d4ccd2d46aba0b9592a79f7e4c, type: 3}

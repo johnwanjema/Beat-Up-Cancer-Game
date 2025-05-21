@@ -207,10 +207,11 @@ MonoBehaviour:
   attackPoint: {fileID: 4434613943005822935}
   attackRange: 2
   minX: -40
-  maxX: 50
+  maxX: 70
   firePoint: {fileID: 0}
   fireballPrefab: {fileID: 0}
   attackSound: {fileID: 8300000, guid: 918003d4ccd2d46aba0b9592a79f7e4c, type: 3}
+  fireBallSound: {fileID: 0}
   soundCooldown: 0.5
 --- !u!82 &3097496681515996524
 AudioSource:
