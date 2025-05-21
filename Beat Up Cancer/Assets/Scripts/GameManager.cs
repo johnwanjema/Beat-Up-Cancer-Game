@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode) {
-    if (scene.name == "Level 1" || scene.name == "Level 2") {
+    if (scene.name == "Level 1" || scene.name == "Level 2" || scene.name == "Level 3") {
         Time.timeScale = 1f; // Ensure game is unpaused
    
         // Determine spawn position
