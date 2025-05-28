@@ -7,10 +7,12 @@ public class KillCounter : MonoBehaviour
     public TMP_Text killCounter;
     public TMP_Text ingameScore;
     public TMP_Text scoreMultiplier;
+    public TMP_Text highScoreUI;
     public GameObject VictoryPanel;
     public static int kills = 0;
     public static int boostedKills = 0;
     public static int multiplier = 1;
+    public static float highScore1, highScore2, highScore3 = 0;
     public static bool doublePoints = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,5 +49,20 @@ public class KillCounter : MonoBehaviour
         {
             multiplier = 2;
         }
+
+        if (SceneManager.GetActiveScene().name == "Level 1")
+        {
+            highScoreUI.text = string.Format("{0}", highScore1);
+        }
+        
+        if (SceneManager.GetActiveScene().name == "Level 2")
+        {
+            highScoreUI.text = string.Format("{0}", highScore2);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Level 3")
+        {
+            highScoreUI.text = string.Format("{0}", highScore3);
+        }        
     }
 }

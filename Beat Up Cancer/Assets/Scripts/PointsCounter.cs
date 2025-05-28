@@ -7,6 +7,7 @@ public class PointsCounter : MonoBehaviour
     public static float levelClearPoints = 10000;
     public static float elimPoints = 0;
     public static float timePoints = 3000;
+    public static float totalScore = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,7 +19,7 @@ public class PointsCounter : MonoBehaviour
     {
         elimPoints = KillCounter.kills * 500 + KillCounter.boostedKills * 500;
         timePoints = (150 - ((Timer.minutes * 60) + Timer.seconds)) * 80;
-        float totalScore = levelClearPoints + elimPoints + timePoints;
+        totalScore = levelClearPoints + elimPoints + timePoints;
         pointsOutput.text = string.Format("{0}\n{1}\n{2}\n{3}", levelClearPoints, elimPoints, timePoints, totalScore);
     }
 }
