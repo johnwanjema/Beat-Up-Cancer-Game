@@ -421,7 +421,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EricksonDemo
+  m_text: Seniorshowcase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b89a0101edae6b4fb5147bf20d7e9ce, type: 2}
   m_sharedMaterial: {fileID: -1608672508514249801, guid: 4b89a0101edae6b4fb5147bf20d7e9ce, type: 2}
