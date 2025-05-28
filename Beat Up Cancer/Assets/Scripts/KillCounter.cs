@@ -8,6 +8,7 @@ public class KillCounter : MonoBehaviour
     public TMP_Text ingameScore;
     public TMP_Text scoreMultiplier;
     public TMP_Text highScoreUI;
+    public TMP_Text displayHighScore1, displayHighScore2, displayHighScore3;
     public GameObject VictoryPanel;
     public static int kills = 0;
     public static int boostedKills = 0;
@@ -54,7 +55,7 @@ public class KillCounter : MonoBehaviour
         {
             highScoreUI.text = string.Format("{0}", highScore1);
         }
-        
+
         if (SceneManager.GetActiveScene().name == "Level 2")
         {
             highScoreUI.text = string.Format("{0}", highScore2);
@@ -63,6 +64,9 @@ public class KillCounter : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
             highScoreUI.text = string.Format("{0}", highScore3);
-        }        
+        }
+        displayHighScore1.text = string.Format("{0}", highScore1);
+        displayHighScore2.text = string.Format("{0}", highScore2);
+        displayHighScore3.text = string.Format("{0}", highScore3);
     }
 }
