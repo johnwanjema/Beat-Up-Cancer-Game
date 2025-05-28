@@ -16,7 +16,7 @@ public class PointsCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        elimPoints = KillCounter.kills * 500;
+        elimPoints = KillCounter.kills * 500 + KillCounter.boostedKills * 500;
         timePoints = (150 - ((Timer.minutes * 60) + Timer.seconds)) * 80;
         float totalScore = levelClearPoints + elimPoints + timePoints;
         pointsOutput.text = string.Format("{0}\n{1}\n{2}\n{3}", levelClearPoints, elimPoints, timePoints, totalScore);

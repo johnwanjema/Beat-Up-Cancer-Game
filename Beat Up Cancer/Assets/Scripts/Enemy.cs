@@ -55,6 +55,10 @@ public class Enemy : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.red;
         if (health <= 0){
             KillCounter.kills += 1;
+            if (KillCounter.doublePoints)
+            {
+                KillCounter.boostedKills += 1;
+            }
             GameManager.instance.ScoreIncrement(100);
             Destroy(gameObject);
         }
