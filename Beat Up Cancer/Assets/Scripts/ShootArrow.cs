@@ -4,6 +4,7 @@ public class ShootArrow : MonoBehaviour
 {
     private SpriteRenderer sprite;
     private Animator anim;
+    private PlayerMovement playerMovement;
 
     [SerializeField] private GameObject arrowPrefab; // The arrow prefab
     [SerializeField] private float arrowSpeed = 15f; // Speed of the arrow
@@ -14,33 +15,39 @@ public class ShootArrow : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     void Update()
     {
-        // Handle arrow shooting logic
-        if (Input.GetKeyDown(KeyCode.V)) // Press 'F' to shoot
+        if (Input.GetKeyDown(KeyCode.V))
         {
-            anim.SetTrigger(SHOOT_ARROW);
+            if (playerMovement.currentArrows > 0)
+            {
+                anim.SetTrigger(SHOOT_ARROW); // Only trigger animation
+            }
         }
     }
 
+    // This method should be called via animation event
     private void Shoot()
     {
-        GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
-        Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
-
-        // Determine direction based on player facing
-        float direction = sprite.flipX ? -1f : 1f;
-
-        // Set the velocity of the arrow
-        rb.linearVelocity = new Vector2(direction * arrowSpeed, 0f);
-
-        // Optional: Flip the arrow sprite if shooting left
-        SpriteRenderer arrowSprite = arrow.GetComponent<SpriteRenderer>();
-        if (direction < 0)
+        if (playerMovement.currentArrows > 0)
         {
-            arrowSprite.flipX = true;
+            playerMovement.currentArrows--;
+            playerMovement.UpdateArrowUI();
+
+            GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
+            Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
+
+            float direction = sprite.flipX ? -1f : 1f;
+            rb.linearVelocity = new Vector2(direction * arrowSpeed, 0f);
+
+            SpriteRenderer arrowSprite = arrow.GetComponent<SpriteRenderer>();
+            if (direction < 0)
+            {
+                arrowSprite.flipX = true;
+            }
         }
     }
 }

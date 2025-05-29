@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -43,12 +45,19 @@ public class PlayerMovement : MonoBehaviour
     private float lastSoundTime = 0f;
     public float soundCooldown = 5f; // half a second cooldown
 
+ 
+    public int currentArrows = 221;
+    public int maxArrows = 20;
+
+    public TMP_Text ammoText; 
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
+        UpdateArrowUI();
     }
 
     private void Awake()
@@ -242,9 +251,9 @@ public class PlayerMovement : MonoBehaviour
             lastSoundTime = Time.time;
         }
     }
-    
+
     public void PlayArrowSound()
-    {   
+    {
         if (Time.time - lastSoundTime > soundCooldown)
         {
             audioSource.PlayOneShot(fireArrowSound);
@@ -252,4 +261,31 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void ReplenishArrows(int amount)
+    {
+        int oldArrows = currentArrows;
+        currentArrows = Mathf.Min(currentArrows + amount, maxArrows);
+        
+        if (currentArrows > oldArrows)
+        {
+            UpdateArrowUI();
+        }
+    }
+
+    public void UpdateArrowUI()
+    {
+        GameObject textObj = GameObject.FindWithTag("AmmoText");
+
+        if (textObj != null)
+        {
+            ammoText = textObj.GetComponent<TMP_Text>();
+        }
+        else
+        {
+            Debug.LogWarning("AmmoText object not found with tag 'AmmoText'");
+        }
+
+
+        ammoText.text = "Special Ammo: " + currentArrows;
+    }
 }

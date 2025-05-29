@@ -24281,6 +24281,7 @@ MonoBehaviour:
   - {fileID: 3827268146858465965, guid: 65ea03a55ef7fa1448af2b925dc18241, type: 3}
   leftPos: {fileID: 1417647721}
   rightPos: {fileID: 1332147391}
+  ammoReplenishPrefab: {fileID: 3466226143826064746, guid: cc44f2f81103440ef992c17c66f69e6a, type: 3}
 --- !u!1 &1198381858
 GameObject:
   m_ObjectHideFlags: 0

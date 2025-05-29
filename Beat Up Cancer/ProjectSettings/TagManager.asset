@@ -8,6 +8,8 @@ TagManager:
   - Parallax
   - Enemy
   - Arrow
+  - SkyboxCamera
+  - AmmoText
   layers:
   - Default
   - TransparentFX

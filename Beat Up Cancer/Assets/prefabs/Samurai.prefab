@@ -246,6 +246,9 @@ MonoBehaviour:
   fireBallSound: {fileID: 0}
   fireArrowSound: {fileID: 8300000, guid: d73672b091933491cb999687d62cfef0, type: 3}
   soundCooldown: 0.5
+  currentArrows: 3
+  maxArrows: 20
+  ammoText: {fileID: 0}
 --- !u!114 &2210129057104246688
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,8 @@ public class EnemySpawner : MonoBehaviour
 
     private int randomIndex;  // Random enemy type index
     private int altSide = -1;   // Alternates side (-1 for left, 1 for right), first will be right
+    [SerializeField]
+    private GameObject ammoReplenishPrefab;
 
     void Start()
     {
@@ -53,14 +55,23 @@ public class EnemySpawner : MonoBehaviour
             {
                 spawnedEnemy.transform.position = leftPos.position;
                 spawnedEnemy.transform.localScale = enemyScale; // Normal direction
-                spawnedEnemy.GetComponent<Enemy>().speed = Random.Range(2,4); // Positive speed
+                spawnedEnemy.GetComponent<Enemy>().speed = Random.Range(2, 4); // Positive speed
             }
             // Spawn on the right side
             else
             {
                 spawnedEnemy.transform.position = rightPos.position;
                 spawnedEnemy.transform.localScale = new Vector3(-enemyScale.x, enemyScale.y, enemyScale.z); // Flipped horizontally
-                spawnedEnemy.GetComponent<Enemy>().speed = -Random.Range(2,4); // Negative speed
+                spawnedEnemy.GetComponent<Enemy>().speed = -Random.Range(2, 4); // Negative speed
+            }
+            
+            // === SPAWN AMMO REPLENISH ===
+            // 30% chance to spawn one each cycle
+            if (Random.value < 0.2f)
+            {
+                float randomX = Random.Range(-40, 70);
+                Vector3 spawnPos = new Vector3(randomX, 0, 0f);
+                Instantiate(ammoReplenishPrefab, spawnPos, Quaternion.identity);
             }
         }
     }
