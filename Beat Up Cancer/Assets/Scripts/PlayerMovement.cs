@@ -119,8 +119,13 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            TriggerAttack(ATTACK_3);
-            PerformSwordAttack(50);
+            if (currentArrows > 0)
+            {
+                currentArrows--;
+                UpdateArrowUI();
+                TriggerAttack(ATTACK_3);
+                PerformSwordAttack(50);
+            }
         }
 
     }

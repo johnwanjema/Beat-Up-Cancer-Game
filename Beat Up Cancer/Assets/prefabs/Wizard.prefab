@@ -244,7 +244,11 @@ MonoBehaviour:
   fireballPrefab: {fileID: 6150901931291250485, guid: 75c3d95e80aa14563bcb850d9830ce50, type: 3}
   attackSound: {fileID: 8300000, guid: 918003d4ccd2d46aba0b9592a79f7e4c, type: 3}
   fireBallSound: {fileID: 8300000, guid: 5ba8e1f62417c4e0d98a4c744f59f537, type: 3}
+  fireArrowSound: {fileID: 0}
   soundCooldown: 0.5
+  currentArrows: 3
+  maxArrows: 20
+  ammoText: {fileID: 0}
 --- !u!82 &8406156231934748532
 AudioSource:
   m_ObjectHideFlags: 0
