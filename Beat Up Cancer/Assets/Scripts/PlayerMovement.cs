@@ -113,7 +113,10 @@ public class PlayerMovement : MonoBehaviour
             TriggerAttack(ATTACK_3);
             PerformSwordAttack(50);
         }
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            KillCounter.kills += 1;
+        }
     }
 
 
