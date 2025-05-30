@@ -9,6 +9,10 @@ public class ArrowBehavior : MonoBehaviour
         {
             // Destroy the enemy object
             KillCounter.kills += 1;
+            if (KillCounter.doublePoints)
+            {
+                KillCounter.boostedKills += 1;
+            }
             Destroy(collision.gameObject);
 
             // Destroy the arrow after hitting the enemy

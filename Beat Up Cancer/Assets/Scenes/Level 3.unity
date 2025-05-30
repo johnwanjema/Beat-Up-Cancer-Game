@@ -42033,6 +42033,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3350221202965491500, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350221202965491500, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350221202965491500, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350221202965491500, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190335
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524389422231722094, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_text
+      value: next
+      objectReference: {fileID: 0}
     - target: {fileID: 4898620031702831554, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -42051,7 +42071,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822170109908691747, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883154980185006860, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

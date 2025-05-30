@@ -63787,6 +63787,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3350221202965491500, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350221202965491500, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350221202965491500, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350221202965491500, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 2622838538383369857, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
       propertyPath: m_fontColor.b
       value: 0.07489322
@@ -63831,6 +63847,22 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1694420331}
+    - target: {fileID: 6064335937379556033, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064335937379556033, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064335937379556033, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064335937379556033, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 6287715748668059874, guid: 0701b04c13dbc4e6a816848d39507469, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
       value: 0.03577783
