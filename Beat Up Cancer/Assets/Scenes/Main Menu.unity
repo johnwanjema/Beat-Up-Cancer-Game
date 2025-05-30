@@ -5075,17 +5075,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1816981511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7895334da5fbaf042b1efc2c59f07788, type: 3}
+  m_Script: {fileID: 11500000, guid: fde92949fef9a9d49bae3b4633abf1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killCounter: {fileID: 0}
-  ingameScore: {fileID: 0}
-  scoreMultiplier: {fileID: 0}
-  highScoreUI: {fileID: 0}
   displayHighScore1: {fileID: 1379542416}
   displayHighScore2: {fileID: 93230615}
   displayHighScore3: {fileID: 385034139}
-  VictoryPanel: {fileID: 0}
 --- !u!1 &1843495887
 GameObject:
   m_ObjectHideFlags: 0

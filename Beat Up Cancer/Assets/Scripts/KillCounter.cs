@@ -8,12 +8,13 @@ public class KillCounter : MonoBehaviour
     public TMP_Text ingameScore;
     public TMP_Text scoreMultiplier;
     public TMP_Text highScoreUI;
-    public TMP_Text displayHighScore1, displayHighScore2, displayHighScore3;
     public GameObject VictoryPanel;
     public static int kills = 0;
     public static int boostedKills = 0;
     public static int multiplier = 1;
-    public static float highScore1, highScore2, highScore3 = 0;
+    public static float highScore1 = 0;
+    public static float highScore2 = 0;
+    public static float highScore3 = 0;
     public static bool doublePoints = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,17 +31,30 @@ public class KillCounter : MonoBehaviour
             ingameScore.text = string.Format("Score: {0}", kills * 500 + boostedKills * 500);
             if (kills >= 99)
             {
+                if (highScore3 < PointsCounter.totalScore)
+                {
+                    highScore3 = PointsCounter.totalScore;
+                }     
                 VictoryPanel.SetActive(true);
                 Time.timeScale = 0;
+                
             }
         }
 
         else
         {
             killCounter.text = string.Format("Cancer Cells Killed: {0}/10", kills);
-            ingameScore.text = string.Format("Score: {0}", kills * 500 + boostedKills * 500);
+            ingameScore.text = string.Format("Score: {0}", kills * 500 + boostedKills * 500);                  
             if (kills >= 10)
             {
+                if (SceneManager.GetActiveScene().name == "Level 1" && highScore1 < PointsCounter.totalScore)
+                {
+                    highScore1 = PointsCounter.totalScore;
+                }   
+                if (SceneManager.GetActiveScene().name == "Level 2" && highScore2 < PointsCounter.totalScore)
+                {
+                    highScore2 = PointsCounter.totalScore;
+                }   
                 VictoryPanel.SetActive(true);
                 Time.timeScale = 0;
             }
@@ -65,8 +79,5 @@ public class KillCounter : MonoBehaviour
         {
             highScoreUI.text = string.Format("{0}", highScore3);
         }
-        displayHighScore1.text = string.Format("{0}", highScore1);
-        displayHighScore2.text = string.Format("{0}", highScore2);
-        displayHighScore3.text = string.Format("{0}", highScore3);
     }
 }
