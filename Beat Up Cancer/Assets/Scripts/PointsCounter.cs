@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class PointsCounter : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PointsCounter : MonoBehaviour
     void Update()
     {
         elimPoints = KillCounter.kills * 500 + KillCounter.boostedKills * 500;
-        timePoints = (150 - ((Timer.minutes * 60) + Timer.seconds)) * 80;
+        timePoints = Math.Max(0, (150 - ((Timer.minutes * 60) + Timer.seconds)) * 80);
         totalScore = levelClearPoints + elimPoints + timePoints;
         pointsOutput.text = string.Format("{0}\n{1}\n{2}\n{3}", levelClearPoints, elimPoints, timePoints, totalScore);
     }
