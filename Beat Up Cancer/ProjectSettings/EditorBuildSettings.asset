@@ -32,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/L3-CancerInfo.unity
     guid: 7a44313e793a641fdab0d3e10edf84dd
+  - enabled: 1
+    path: Assets/Scenes/L3-End-CancerInfo.unity
+    guid: 776ea761149c7c748944065042e51e72
+  - enabled: 1
+    path: Assets/Scenes/L3-FinalCredits.unity
+    guid: 76c6430b5c9092e46b7ad7048d710369
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
