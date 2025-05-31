@@ -215,11 +215,19 @@ public class PlayerMovement : MonoBehaviour
                 Enemy enemy = collider.GetComponent<Enemy>();
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(attackDamage);
-                }
+                   enemy.TakeDamage(attackDamage);
+                } 
                 else
                 {
-                    Debug.LogWarning($"{collider.name} is tagged as 'Enemy' but has no Enemy script.");
+                    Boss boss = collider.GetComponent<Boss>();
+                    if (boss != null)
+                    {
+                        boss.TakeDamage(attackDamage);
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"{collider.name} is tagged as 'Enemy' but has no Enemy script.");
+                    }
                 }
             }
         }

@@ -12,10 +12,18 @@ public class ArrowBehavior : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(150);
-            }
+            } 
             else
             {
-                Debug.LogWarning($"{collision.name} is tagged as 'Enemy' but has no Enemy script.");
+                Boss boss = collision.GetComponent<Boss>();
+                if (boss != null)
+                {
+                    boss.TakeDamage(150);
+                }
+                else
+                {
+                    Debug.LogWarning($"{collision.name} is tagged as 'Enemy' but has no Enemy script.");
+                }
             }
             Destroy(gameObject);
         }
