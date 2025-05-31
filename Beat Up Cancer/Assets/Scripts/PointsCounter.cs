@@ -22,7 +22,7 @@ public class PointsCounter : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
             levelClearPoints = 100000;
-            elimPoints = KillCounter.kills * 25000 + KillCounter.boostedKills * 25000;
+            elimPoints = KillCounter.kills * 50000 + KillCounter.boostedKills * 50000;
         }
         if (SceneManager.GetActiveScene().name != "Level 3")
         {
