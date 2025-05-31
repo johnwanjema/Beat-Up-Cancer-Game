@@ -8,14 +8,15 @@ public class ArrowBehavior : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             // Destroy the enemy object
-            KillCounter.kills += 1;
-            if (KillCounter.doublePoints)
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (enemy != null)
             {
-                KillCounter.boostedKills += 1;
+                enemy.TakeDamage(150);
             }
-            Destroy(collision.gameObject);
-
-            // Destroy the arrow after hitting the enemy
+            else
+            {
+                Debug.LogWarning($"{collision.name} is tagged as 'Enemy' but has no Enemy script.");
+            }
             Destroy(gameObject);
         }
     }
