@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8772071143364074573}
   - component: {fileID: -5582772203361319522}
   - component: {fileID: 3241311472210533326}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Esophageal Cancer v2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
