@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9188817952746107112}
   - component: {fileID: -8772071143364074573}
   - component: {fileID: -5582772203361319522}
-  - component: {fileID: 7305029778498157029}
+  - component: {fileID: 4158098431766187126}
   m_Layer: 0
   m_Name: Final Boss Cancer
   m_TagString: Enemy
@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1128219510188467110, guid: 7cb9e813899348748992b91373783a3a, type: 3}
+  m_Sprite: {fileID: 1128219510188467110, guid: d4d74138e33564b8b99639772f5c5d7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.46, y: 2.18}
+  m_Size: {x: 1.6, y: 1.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -128,8 +128,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.9}
-    newSize: {x: 2.46, y: 2.18}
+    oldSize: {x: 1.6, y: 1.93}
+    newSize: {x: 1.6, y: 1.93}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -151,7 +151,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 10
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7305029778498157029
+--- !u!114 &4158098431766187126
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,10 +172,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3827268146858465965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1752ae146a79eff4ead83767c06c006d, type: 3}
+  m_Script: {fileID: 11500000, guid: 425a658b02ffa422fa935f87b7c5817d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   flashCooldown: 0

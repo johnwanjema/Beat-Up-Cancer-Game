@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    private  float speed = 4;
+    private  float speed = 3.5f;
     [SerializeField] private LayerMask groundLayer;
     private  int health = 1000;
     private int jumpSpeed = 40;
@@ -42,6 +42,8 @@ public class Boss : MonoBehaviour
         {
             mybody.linearVelocity = new Vector2(mybody.linearVelocity.x, 0);
         }
+
+        GetComponent<SpriteRenderer>().flipX = directionMultiplier == 1;
         // velocity as a force to move player up
         // move enemy on the x- axis 
         if (IsGrounded() || (mybody.linearVelocity.x == 0 && mybody.linearVelocity.y == 0))
