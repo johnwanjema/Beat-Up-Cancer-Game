@@ -27,9 +27,9 @@ public class KillCounter : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
-            killCounter.text = string.Format("Cancer Cells Killed: {0}/2", kills);
-            ingameScore.text = string.Format("Score: {0}", kills * 25000 + boostedKills * 25000);
-            if (kills >= 2)
+            killCounter.text = string.Format("Cancer Cells Killed: {0}/1", kills);
+            ingameScore.text = string.Format("Score: {0}", kills * 50000 + boostedKills * 50000);
+            if (kills >= 1)
             {                   
                 if (highScore3 < PointsCounter.totalScore)
                 {
