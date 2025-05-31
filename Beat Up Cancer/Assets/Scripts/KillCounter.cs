@@ -27,17 +27,16 @@ public class KillCounter : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
-            killCounter.text = string.Format("Cancer Cells Killed: {0}/99", kills);
-            ingameScore.text = string.Format("Score: {0}", kills * 500 + boostedKills * 500);
-            if (kills >= 99)
-            {
+            killCounter.text = string.Format("Cancer Cells Killed: {0}/2", kills);
+            ingameScore.text = string.Format("Score: {0}", kills * 25000 + boostedKills * 25000);
+            if (kills >= 2)
+            {                   
                 if (highScore3 < PointsCounter.totalScore)
                 {
                     highScore3 = PointsCounter.totalScore;
                 }     
                 VictoryPanel.SetActive(true);
                 Time.timeScale = 0;
-                
             }
         }
 

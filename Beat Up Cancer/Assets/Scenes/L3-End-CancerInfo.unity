@@ -176,17 +176,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Testing, testing!
-
-
-    Testing, testing!
-
-
-    Testing, testing!
-
-
-    Testing,
-    testing!'
+  m_text: "Congratulations, Fighter! You\u2019ve defeated the Cancer Boss in Level
+    3!\r\nYour skill and determination have carried you from the first warning signs
+    through the local challenges and into the final onslaught.\r\n\r\nBy mastering
+    each stage, spotting the early glitches in Level 1, containing the spread in
+    Level 2, and finally outmaneuvering the final boss in Level 3, you\u2019ve shown
+    that knowledge and courage are your strongest weapons.\r\n\r\nYour triumph here
+    isn\u2019t just game points, it reflects the real-life power of persistence, 
+    and informed action against cancer. Great work, because of you, hope moves forward,
+    and the fight against cancer shines a little brighter!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b89a0101edae6b4fb5147bf20d7e9ce, type: 2}
   m_sharedMaterial: {fileID: -1608672508514249801, guid: 4b89a0101edae6b4fb5147bf20d7e9ce, type: 2}
@@ -839,7 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scrollSpeed: 30
-  _waitTime: 20
+  _waitTime: 28
   _nextSceneName: L3-FinalCredits
 --- !u!114 &1312526098
 MonoBehaviour:
@@ -912,7 +910,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312526096}
   m_LocalRotation: {x: 0.1326024, y: -0, z: -0, w: 0.99116933}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -921,7 +919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 15.24, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 540}
+  m_AnchoredPosition: {x: 964, y: 555}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1439960955
