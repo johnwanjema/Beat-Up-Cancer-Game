@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9188817952746107112}
   - component: {fileID: -8772071143364074573}
   - component: {fileID: -5582772203361319522}
-  - component: {fileID: 2142214923232436295}
+  - component: {fileID: 500834259841237348}
   m_Layer: 0
   m_Name: Final Boss
   m_TagString: Enemy
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 2.46, y: 2.18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &-8772071143364074573
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2142214923232436295
+--- !u!114 &500834259841237348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,13 +172,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3827268146858465965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b85ee47016e104f8ddd29ad04741e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 425a658b02ffa422fa935f87b7c5817d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  health: 1000
-  jumpSpeed: 11
   flashCooldown: 0
