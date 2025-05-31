@@ -1462,55 +1462,55 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.010791808
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.0030866
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalScale.y
       value: 2.9866726
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.8874
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.2824
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 2391627001041267398, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3827268146858465965, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+    - target: {fileID: 3827268146858465965, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
       propertyPath: m_Name
       value: Final Boss Cancer
       objectReference: {fileID: 0}
@@ -1522,7 +1522,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 8b97d0bc404e874498ee1e2ac63f82ce, type: 3}
 --- !u!1 &120328267
 GameObject:
   m_ObjectHideFlags: 0
@@ -19572,83 +19572,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!1001 &1238589756
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8772071143364074573, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_Size.y
-      value: 1.8484077
-      objectReference: {fileID: 0}
-    - target: {fileID: -8772071143364074573, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.010791808
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.0030866
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.9866726
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391627001041267398, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3827268146858465965, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_Name
-      value: Final Boss Cancer (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188817952746107112, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: da6d887cea28c474c99df217b0f916e5, type: 3}
 --- !u!1 &1297035840
 GameObject:
   m_ObjectHideFlags: 0
@@ -33468,4 +33391,3 @@ SceneRoots:
   - {fileID: 756734844}
   - {fileID: 685189336}
   - {fileID: 99420647}
-  - {fileID: 1238589756}
