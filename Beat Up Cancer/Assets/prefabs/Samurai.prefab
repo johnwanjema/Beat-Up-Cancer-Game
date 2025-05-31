@@ -235,7 +235,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 15
+  speed: 13
   attackPoint: {fileID: 8880537687042646921}
   attackRange: 2
   minX: -40
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 847246872091255939, guid: f5a23da1b84d34b7780da174a72ad095, type: 3}
-  arrowSpeed: 15
+  arrowSpeed: 18
 --- !u!82 &7378643237903704805
 AudioSource:
   m_ObjectHideFlags: 0

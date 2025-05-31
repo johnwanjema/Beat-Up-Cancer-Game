@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     public TMP_Text ammoText; 
 
+    private float stunTimer = 0f;
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -68,6 +69,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        stunTimer -= Time.deltaTime;
+        if (stunTimer < 0)
+        {
+            GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = Color.red;
+        }
+
         UpdateAttackPoint();
         HandleInput();
         Vector3 pos = transform.position;
@@ -81,7 +92,8 @@ public class PlayerMovement : MonoBehaviour
     {
         // If attacking, disable movement input
         if (isAttacking) return;
-
+        // If stunned, can't move for 0.5 seconds
+        if (stunTimer > 0) return;
         movementX = Input.GetAxisRaw("Horizontal");
         body.linearVelocity = new Vector2(movementX * speed, body.linearVelocity.y);
 
@@ -127,7 +139,10 @@ public class PlayerMovement : MonoBehaviour
                 PerformSwordAttack(50);
             }
         }
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            KillCounter.kills += 1;
+        }
     }
 
 
@@ -179,18 +194,24 @@ public class PlayerMovement : MonoBehaviour
 
         return raycastHit.collider != null;
     }
-
-    /*void OnCollisionEnter2D(Collision2D collision)
+    
+    //Enemy doesn't do damage, knocks player back slightly, and can't move for short period of time
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        // -1 here gives 1 second of invincibilty after being hit
+        if (collision.gameObject.CompareTag("Enemy") && stunTimer < -1f)
         {
-            if (transform.position.y > collision.transform.position.y)
+            stunTimer = 0.5f;
+            if (transform.position.x > collision.transform.position.x)
             {
-                KillCounter.kills += 1;
-                Destroy(collision.gameObject);
+                body.linearVelocity = new Vector2(body.linearVelocity.x + 5f, body.linearVelocity.y + 3f);
+            }
+            else
+            {
+                body.linearVelocity = new Vector2(body.linearVelocity.x - 5f, body.linearVelocity.y + 3f);
             }
         }
-    }*/
+    }
 
     public void PerformSwordAttack(int attackDamage)
     {
@@ -208,11 +229,19 @@ public class PlayerMovement : MonoBehaviour
                 Enemy enemy = collider.GetComponent<Enemy>();
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(attackDamage);
-                }
+                   enemy.TakeDamage(attackDamage);
+                } 
                 else
                 {
-                    Debug.LogWarning($"{collider.name} is tagged as 'Enemy' but has no Enemy script.");
+                    Boss boss = collider.GetComponent<Boss>();
+                    if (boss != null)
+                    {
+                        boss.TakeDamage(attackDamage);
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"{collider.name} is tagged as 'Enemy' but has no Enemy script.");
+                    }
                 }
             }
         }

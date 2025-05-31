@@ -235,7 +235,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 15
+  speed: 13
   attackPoint: {fileID: 8933023740276056941}
   attackRange: 2
   minX: -40
