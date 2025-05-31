@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9188817952746107112}
   - component: {fileID: -8772071143364074573}
   - component: {fileID: -5582772203361319522}
-  - component: {fileID: 7305029778498157029}
+  - component: {fileID: 4158098431766187126}
   m_Layer: 0
   m_Name: Final Boss Cancer
   m_TagString: Enemy
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1128219510188467110, guid: bff6a0898fae55d4ab94ac1f6ff2a257, type: 3}
+  m_Sprite: {fileID: 1128219510188467110, guid: d4d74138e33564b8b99639772f5c5d7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7305029778498157029
+--- !u!114 &4158098431766187126
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,10 +172,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3827268146858465965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b85ee47016e104f8ddd29ad04741e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 425a658b02ffa422fa935f87b7c5817d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   flashCooldown: 0
