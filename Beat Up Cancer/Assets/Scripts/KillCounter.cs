@@ -37,10 +37,10 @@ public class KillCounter : MonoBehaviour
         // --- UI updates ---
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
-            killCounter.text = $"Cancer Cells Killed: {kills}/99";
-            ingameScore.text = $"Score: {kills * 500 + boostedKills * 500}";
+            killCounter.text = $"Cancer Cells Killed: {kills}/1";
+            ingameScore.text = $"Score: {kills * 50000 + boostedKills * 50000}";
 
-            if (kills >= 99)
+            if (kills >= 1)
             {
                 if (highScore3 < PointsCounter.totalScore)
                     highScore3 = PointsCounter.totalScore;
