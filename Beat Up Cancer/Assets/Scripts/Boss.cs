@@ -11,12 +11,14 @@ public class Boss : MonoBehaviour
     private BoxCollider2D boxCollider;
 
     private int directionMultiplier = -1;
+    private SpriteRenderer bossSpriteRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mybody =  GetComponent<Rigidbody2D>();
+        mybody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        bossSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -29,10 +31,12 @@ public class Boss : MonoBehaviour
         if (FindPlayer().transform.position.x - transform.position.x < 0 && (IsGrounded() || transform.position.y > 7 || Mathf.Abs(mybody.linearVelocity.x) < 1))
         {
             directionMultiplier = -1;
+            
         }
         else if (IsGrounded() || transform.position.y > 7 || Mathf.Abs(mybody.linearVelocity.x) < 1)
         {
             directionMultiplier = 1;
+            
         }
         if (IsGrounded() && mybody.linearVelocity.y < 0)
         {

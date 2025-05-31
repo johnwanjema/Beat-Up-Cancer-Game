@@ -7,6 +7,7 @@ public class ChangeScene : MonoBehaviour
     {
         KillCounter.kills = 0;
         KillCounter.boostedKills = 0;
+        PointsCounter.totalScore = 0;
         SceneManager.LoadScene(sceneID);
     }
 
