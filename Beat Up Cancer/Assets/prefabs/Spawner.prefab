@@ -50,8 +50,8 @@ MonoBehaviour:
   - {fileID: 5576557171194861462, guid: f327c37e6155240858f057403d997f4c, type: 3}
   leftPos: {fileID: 2707400391697967934}
   rightPos: {fileID: 3835412094687146936}
-  ammoReplenishPrefab: {fileID: 0}
-  doubleDamage: {fileID: 0}
+  ammoReplenishPrefab: {fileID: 3466226143826064746, guid: 6b878b64aea07c3478e8fb755caefd52, type: 3}
+  doubleDamage: {fileID: 4334627397037447955, guid: 849c573768ce06f409a95e3a64832a85, type: 3}
 --- !u!1 &4522363738657710763
 GameObject:
   m_ObjectHideFlags: 0

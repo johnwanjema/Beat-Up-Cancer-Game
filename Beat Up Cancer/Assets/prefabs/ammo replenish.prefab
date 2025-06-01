@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4161658659832421976, guid: 7187eaf2479574a2eac5d94c6e2abf1a, type: 3}
+  m_Sprite: {fileID: 4161658659832421976, guid: b21fca77faaebca4dada470d92d0fd10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3466226143826064746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97ff635ff95db46329ec753a57ed6abb, type: 3}
+  m_Script: {fileID: 11500000, guid: 338015e6395c8c049b2ae86095699ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ammoAmount: 3
