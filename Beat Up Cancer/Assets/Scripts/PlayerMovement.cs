@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     public float soundCooldown = 5f; // half a second cooldown
 
  
-    public int currentArrows = 221;
+    public int currentArrows = 3;
     public int maxArrows = 20;
 
     public TMP_Text ammoText; 
@@ -131,13 +131,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            if (currentArrows > 0)
-            {
-                currentArrows--;
-                UpdateArrowUI();
                 TriggerAttack(ATTACK_3);
                 PerformSwordAttack(50);
-            }
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
