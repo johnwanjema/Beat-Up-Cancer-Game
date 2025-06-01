@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 269402506322065328}
   - component: {fileID: 1953541165135695591}
   - component: {fileID: 8406156231934748532}
+  - component: {fileID: 4331121029683640502}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Player
@@ -244,7 +245,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 6150901931291250485, guid: 75c3d95e80aa14563bcb850d9830ce50, type: 3}
   attackSound: {fileID: 8300000, guid: 918003d4ccd2d46aba0b9592a79f7e4c, type: 3}
   fireBallSound: {fileID: 8300000, guid: 5ba8e1f62417c4e0d98a4c744f59f537, type: 3}
-  fireArrowSound: {fileID: 0}
+  fireArrowSound: {fileID: 8300000, guid: 5ba8e1f62417c4e0d98a4c744f59f537, type: 3}
   soundCooldown: 0.5
   currentArrows: 3
   maxArrows: 20
@@ -346,6 +347,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4331121029683640502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869172538447007649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9c1922a9c1454596cb63b90a67391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 847246872091255939, guid: 4b6a3074c88a22e48bc3d9178b8aae7b, type: 3}
+  arrowSpeed: 18
 --- !u!1 &8840638423735164982
 GameObject:
   m_ObjectHideFlags: 0

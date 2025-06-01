@@ -33237,11 +33237,11 @@ PrefabInstance:
     - target: {fileID: 6781312192628835583, guid: d04d95583241742a9b5214a97d5acac9, type: 3}
       propertyPath: doubleDamage
       value: 
-      objectReference: {fileID: 4334627397037447955, guid: 06b86e1ac018748978433dd19855e9bc, type: 3}
+      objectReference: {fileID: 4334627397037447955, guid: 849c573768ce06f409a95e3a64832a85, type: 3}
     - target: {fileID: 6781312192628835583, guid: d04d95583241742a9b5214a97d5acac9, type: 3}
       propertyPath: ammoReplenishPrefab
       value: 
-      objectReference: {fileID: 3466226143826064746, guid: cc44f2f81103440ef992c17c66f69e6a, type: 3}
+      objectReference: {fileID: 3466226143826064746, guid: 6b878b64aea07c3478e8fb755caefd52, type: 3}
     - target: {fileID: 6781312192628835583, guid: d04d95583241742a9b5214a97d5acac9, type: 3}
       propertyPath: enemyReference.Array.size
       value: 2
