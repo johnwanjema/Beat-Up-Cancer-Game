@@ -6092,8 +6092,8 @@ MonoBehaviour:
   - {fileID: 3827268146858465965, guid: 65ea03a55ef7fa1448af2b925dc18241, type: 3}
   leftPos: {fileID: 1417647721}
   rightPos: {fileID: 1332147391}
-  ammoReplenishPrefab: {fileID: 3466226143826064746, guid: cc44f2f81103440ef992c17c66f69e6a, type: 3}
-  doubleDamage: {fileID: 4334627397037447955, guid: 06b86e1ac018748978433dd19855e9bc, type: 3}
+  ammoReplenishPrefab: {fileID: 3466226143826064746, guid: 6b878b64aea07c3478e8fb755caefd52, type: 3}
+  doubleDamage: {fileID: 4334627397037447955, guid: 849c573768ce06f409a95e3a64832a85, type: 3}
 --- !u!1 &1198019443
 GameObject:
   m_ObjectHideFlags: 0
