@@ -1,6 +1,6 @@
 #  Beat Up Cancer Game
 
-### Inference image
+### Main Menu image
 ![Project Logo](Assets/mainMenu.png)
 
 ##  Created By
