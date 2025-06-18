@@ -9,9 +9,9 @@
 
 ## Description
 
-**Beat Up Cancer** is a 2D action-platformer that blends dynamic gameplay with educational cancer awareness. Designed as both an engaging experience and a tool for empowerment, players fight symbolic representations of cancer using powerful moves, learn facts before each level, and face the consequences of leaving cancer cells untreated.
+**Beat Up Cancer** is a 2D action-platformer that blends dynamic gameplay with educational cancer awareness. Designed as both an engaging experience and a tool for empowerment, players fight symbolic representations of cancer using powerful moves, and learn facts before each level.
 
-Whether you're a patient, supporter, or just looking for a unique game with a purpose — this game transforms learning into action.
+Whether you're a patient, supporter, or just looking for a unique game with a purpose, this game transforms learning into action.
 
 ---
 
